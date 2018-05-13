@@ -16,10 +16,10 @@
 		            <td th:text="${cartorio.id}"></td>
 		            <td th:text="${cartorio.nome}"></td>
 		            <td>
-						<a th:href="@{'/cartorio-editar' + ${cartorio.id}}">Editar</a>
+						<a th:href="@{'/cartorio-editar' + ${cartorio.id}}"><i class="material-icons center">edit</i></a>
 		            </td>
 		            <td>
-		            	<a th:href="@{'/deletar' + ${cartorio.id}}">Deletar</a>
+		            	<a th:href="@{'/deletar' + ${cartorio.id}}" onclick="return confirm('Voce tem certeza que deseja excluir esse item?');"><i class="material-icons center">delete</i></a>
 		            </td>
 		        </tr>
 		    </table>

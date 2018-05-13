@@ -67,7 +67,7 @@ public class CartorioController {
 		return "browser";
 	}
 	
-	@RequestMapping(value = "/deletar{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/deletar{id}")
 	public String delete(@PathVariable Long id, Model model) {
 		cartorioService.deleteCartorio(id);
 		model.addAttribute("cartorios", cartorioService.getAllCartorios());
