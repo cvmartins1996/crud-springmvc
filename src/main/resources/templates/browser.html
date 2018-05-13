@@ -15,11 +15,11 @@
 		        <tr th:each="cartorio : ${cartorios}">
 		            <td th:text="${cartorio.id}"></td>
 		            <td th:text="${cartorio.nome}"></td>
-		            <td th:text="${cartorio.nome}">
-						<a th:href="@{'/cartorio/editar/' + ${cartorio.id}}">Editar</a>
+		            <td>
+						<a th:href="@{'/cartorio-editar' + ${cartorio.id}}">Editar</a>
 		            </td>
-		            <td th:text="${cartorio.nome}">
-		            	<a th:href="@{'/cartorio/deletar/' + ${cartorio.id}}">Deletar</a>
+		            <td>
+		            	<a th:href="@{'/deletar' + ${cartorio.id}}">Deletar</a>
 		            </td>
 		        </tr>
 		    </table>

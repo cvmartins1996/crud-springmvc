@@ -6,10 +6,14 @@
 		<div th:replace="fragments/navbar :: navbar"></div>
 		<div class="container">
 			<div class="row">
-				<form action="#" th:action="@{/cartorio-inserir}" method="post" onsubmit="validarForm()" class="col s12">
+				<form action="#" th:action="@{/cartorio-salvar}" method="post" onsubmit="validarForm()" class="col s12">
 					<div class="row">
 					    <div class="input-field"> 
-				    		<input type="text" th:field="${cartorio.nome}" class="obrigatorio" required="required"/>
+				    		<input type="text" th:field="${cartorio.id}" class="obrigatorio"  readonly="readonly"/>
+				    		<label for="nome">Codigo do Cartorio: </label>
+					    </div>
+					    <div class="input-field"> 
+				    		<input type="text" th:field="${cartorio.nome}" class="obrigatorio" required="required" />
 				    		<label for="nome">Nome do Cartorio: </label>
 					    </div>
 				   	</div>
