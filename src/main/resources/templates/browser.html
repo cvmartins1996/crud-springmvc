@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<th:block th:include="fragments/head :: head"></th:block>
+	<body style="display: flex; min-height: 100vh; flex-direction: column;">
+		<div th:replace="fragments/navbar :: navbar"></div>
+		<div th:if="${not #lists.isEmpty(cartorios)}">
+		    <h2>Cartorios</h2>
+		    <table>
+		        <tr>
+		            <th>Id</th>
+		            <th>Nome</th>
+		            <th>Editar</th>
+		            <th>Deletar</th>
+		        </tr>
+		        <tr th:each="cartorio : ${cartorios}">
+		            <td th:text="${cartorio.id}"></td>
+		            <td th:text="${cartorio.nome}"></td>
+		            <td th:text="${cartorio.nome}">
+						<a th:href="@{'/cartorio/editar/' + ${cartorio.id}}">Editar</a>
+		            </td>
+		            <td th:text="${cartorio.nome}">
+		            	<a th:href="@{'/cartorio/deletar/' + ${cartorio.id}}">Deletar</a>
+		            </td>
+		        </tr>
+		    </table>
+		</div>
+		<div th:if="${#lists.isEmpty(cartorios)}">
+		    <p> Nao existe cartorio registrado </p>
+		</div>
+		<div th:replace="fragments/script :: script"></div>
+	</body>
+</html>

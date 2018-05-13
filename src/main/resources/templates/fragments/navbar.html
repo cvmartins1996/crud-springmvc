@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<nav class="blue" th:fragment="navbar">
+	<div class="nav-wrapper">
+		<a href="/" th:href="@{'/'}" class="brand-logo">Cadastro de
+			Cartorios</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="crud.html" th:href="@{'/cartorio'}">Novo
+					Cartorio</a></li>
+			<li><a href="browser.html" th:href="@{'/cartorios-browser'}">Cartorios</a></li>
+		</ul>
+	</div>
+</nav>

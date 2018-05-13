@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<th:block th:include="fragments/head :: head"></th:block>
+	<body>
+		<div th:replace="fragments/navbar :: navbar"></div>
+		<div class="container">
+			<div class="row">
+				<h1>Desafio proposto</h1>
+				<p> 
+					Crud de Cartorios - neste pequeno projeto foi utilizado as seguintes
+					tecnologias: HTML5, Materialize, Jquery, Hibernate/JPA, Spring e Thymeleaf 
+				</p>
+			</div>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+		<div th:replace="fragments/script :: script"></div>
+	</body>
+</html>
